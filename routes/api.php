@@ -19,3 +19,10 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::get('/preffer','Api\prefferController@prefferApi');
+
+
+Route::get('/blog','Api\BlogController@indexApi');
+Route::post('/blog/insertblog','Api\BlogController@createBlog');
+Route::put('/blog/update/{id}','Api\BlogController@blogUpdate');
+Route::delete('/blog/delete/{id}','Api\BlogController@deleteBlog');
+

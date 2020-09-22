@@ -56,6 +56,23 @@ Route::get('/home/country/delete/{id}','Admin\CountryController@countryDelete');
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/home/blog','Api\BlogController@index');
     Route::get('/home/blog/insertblog','Api\BlogController@insertBlog');
+    Route::post('/home/blog/insertblog','Api\BlogController@createBlog');
+    Route::get('home/blog/delete/{id}','Api\BlogController@deleteBlog');
+    Route::get('/home/blog/update/{id}','Api\BlogController@getBlogUpdate');
+    Route::post('/home/blog/update/{id}','Api\BlogController@blogUpdate');
+
 });
 
 //End BLog Route
+
+//Banner Route
+Route::group(['middlewere' => 'auth'], function () {
+    Route::get('/home/banner','Api\BannerController@index');
+    Route::post('/home/banner','Api\BannerController@store');
+
+    Route::get('/home/banner/status/{id}','Api\BannerController@deactivate');
+    Route::get('/home/banner/update/{id}','Api\BannerController@deactivate');
+
+});
+
+//End Banner Rote

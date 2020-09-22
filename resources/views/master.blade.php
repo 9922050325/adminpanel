@@ -364,6 +364,13 @@
                         </a>
                     </li>
 
+                    <li>
+                        <a href="/home/banner">
+                            <i class="material-icons">pie_chart</i>
+                            <span>Banner</span>
+                        </a>
+                    </li>
+
 
 
 
